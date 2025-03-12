@@ -29,7 +29,7 @@
       },
       "id": 30,
       "panels": [],
-      "title": "Сводка стоимости",
+      "title": "Cost Summary",
       "type": "row"
     },
     {
@@ -53,7 +53,7 @@
               }
             ]
           },
-          "unit": "currencyRUB"
+          "unit": "currencyUSD"
         },
         "overrides": []
       },
@@ -89,7 +89,7 @@
           "refId": "A"
         }
       ],
-      "title": "Текущая общая стоимость запрошенных ресурсов в час",
+      "title": "Current Total Cost of Requested Resources (per hour)",
       "type": "stat"
     },
     {
@@ -113,7 +113,7 @@
               }
             ]
           },
-          "unit": "currencyRUB"
+          "unit": "currencyUSD"
         },
         "overrides": []
       },
@@ -149,7 +149,7 @@
           "refId": "A"
         }
       ],
-      "title": "Текущая общая стоимость используемых ресурсов в час",
+      "title": "Current Total Cost of Used Resources (per hour)",
       "type": "stat"
     },
     {
@@ -173,7 +173,7 @@
               }
             ]
           },
-          "unit": "currencyRUB"
+          "unit": "currencyUSD"
         },
         "overrides": []
       },
@@ -209,7 +209,7 @@
           "refId": "A"
         }
       ],
-      "title": "Текущая стоимость хранилища в час",
+      "title": "Current Storage Cost (per hour)",
       "type": "stat"
     },
     {
@@ -237,7 +237,7 @@
               }
             ]
           },
-          "unit": "currencyRUB"
+          "unit": "currencyUSD"
         },
         "overrides": []
       },
@@ -271,7 +271,7 @@
           "refId": "A"
         }
       ],
-      "title": "Распределение общей стоимости по namespace",
+      "title": "Total Cost Distribution by Namespace",
       "type": "bargauge"
     },
     {
@@ -285,7 +285,7 @@
       },
       "id": 12,
       "panels": [],
-      "title": "Стоимость CPU",
+      "title": "CPU Cost",
       "type": "row"
     },
     {
@@ -346,7 +346,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Почасовая стоимость CPU (запрошено)",
+      "title": "Hourly CPU Cost (Requested)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -362,7 +362,7 @@
       },
       "yaxes": [
         {
-          "format": "currencyRUB",
+          "format": "currencyUSD",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -441,7 +441,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Почасовая стоимость CPU (фактически используется)",
+      "title": "Hourly CPU Cost (Actually Used)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -457,7 +457,7 @@
       },
       "yaxes": [
         {
-          "format": "currencyRUB",
+          "format": "currencyUSD",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -503,7 +503,7 @@
               }
             ]
           },
-          "unit": "currencyRUB"
+          "unit": "currencyUSD"
         },
         "overrides": []
       },
@@ -519,7 +519,7 @@
         "sortBy": [
           {
             "desc": true,
-            "displayName": "Стоимость CPU"
+            "displayName": "CPU Cost"
           }
         ]
       },
@@ -534,7 +534,7 @@
           "refId": "A"
         }
       ],
-      "title": "Стоимость CPU по подам",
+      "title": "CPU Cost by Pod",
       "type": "table"
     },
     {
@@ -548,7 +548,7 @@
       },
       "id": 8,
       "panels": [],
-      "title": "Стоимость памяти",
+      "title": "Memory Cost",
       "type": "row"
     },
     {
@@ -609,7 +609,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Почасовая стоимость памяти (запрошено)",
+      "title": "Hourly Memory Cost (Requested)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -625,7 +625,7 @@
       },
       "yaxes": [
         {
-          "format": "currencyRUB",
+          "format": "currencyUSD",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -704,7 +704,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Почасовая стоимость памяти (фактически используется)",
+      "title": "Hourly Memory Cost (Actually Used)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -720,7 +720,7 @@
       },
       "yaxes": [
         {
-          "format": "currencyRUB",
+          "format": "currencyUSD",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -766,7 +766,7 @@
               }
             ]
           },
-          "unit": "currencyRUB"
+          "unit": "currencyUSD"
         },
         "overrides": []
       },
@@ -797,7 +797,7 @@
           "refId": "A"
         }
       ],
-      "title": "Стоимость памяти по подам",
+      "title": "Memory Cost by Pod",
       "type": "table"
     },
     {
@@ -811,7 +811,7 @@
       },
       "id": 44,
       "panels": [],
-      "title": "Стоимость GPU",
+      "title": "GPU Cost",
       "type": "row"
     },
     {
@@ -872,7 +872,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Почасовая стоимость GPU (запрошено)",
+      "title": "Hourly GPU Cost (Requested)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -888,7 +888,7 @@
       },
       "yaxes": [
         {
-          "format": "currencyRUB",
+          "format": "currencyUSD",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -967,7 +967,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Почасовая стоимость GPU (фактически используется)",
+      "title": "Hourly GPU Cost (Actually Used)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -983,7 +983,7 @@
       },
       "yaxes": [
         {
-          "format": "currencyRUB",
+          "format": "currencyUSD",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1029,7 +1029,7 @@
               }
             ]
           },
-          "unit": "currencyRUB"
+          "unit": "currencyUSD"
         },
         "overrides": []
       },
@@ -1060,7 +1060,7 @@
           "refId": "A"
         }
       ],
-      "title": "Стоимость GPU по подам",
+      "title": "GPU Cost by Pod",
       "type": "table"
     },
     {
@@ -1074,7 +1074,7 @@
       },
       "id": 16,
       "panels": [],
-      "title": "Стоимость хранилища",
+      "title": "Storage Cost",
       "type": "row"
     },
     {
@@ -1135,7 +1135,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Почасовая стоимость хранилища (PVCs)",
+      "title": "Hourly Storage Cost (PVCs)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1151,7 +1151,7 @@
       },
       "yaxes": [
         {
-          "format": "currencyRUB",
+          "format": "currencyUSD",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1197,7 +1197,7 @@
               }
             ]
           },
-          "unit": "currencyRUB"
+          "unit": "currencyUSD"
         },
         "overrides": []
       },
@@ -1228,7 +1228,7 @@
           "refId": "A"
         }
       ],
-      "title": "Стоимость хранилища по PVC",
+      "title": "Storage Cost by PVC",
       "type": "table"
     },
     {
@@ -1242,7 +1242,7 @@
       },
       "id": 14,
       "panels": [],
-      "title": "Сводная таблица",
+      "title": "Summary Table",
       "type": "row"
     },
     {
@@ -1266,7 +1266,7 @@
               }
             ]
           },
-          "unit": "currencyRUB"
+          "unit": "currencyUSD"
         },
         "overrides": [
           {
@@ -1409,7 +1409,7 @@
           "refId": "E"
         }
       ],
-      "title": "Сводная таблица стоимости по пространствам имен",
+      "title": "Cost Summary by Namespace",
       "transformations": [
         {
           "id": "merge",
@@ -1453,7 +1453,7 @@
       },
       "id": 20,
       "panels": [],
-      "title": "Настройки цен",
+      "title": "Price Settings",
       "type": "row"
     },
     {
@@ -1466,11 +1466,11 @@
       },
       "id": 22,
       "options": {
-        "content": "# Цены за ресурсы\nНастройте стоимость ресурсов через переменные ниже. Указанные значения используются в расчетах на всем дашборде.",
+        "content": "# Resource Pricing\nConfigure resource costs using the variables below. These values are used in calculations throughout the dashboard.",
         "mode": "markdown"
       },
       "pluginVersion": "7.4.0",
-      "title": "Информация о ценах",
+      "title": "Pricing Information",
       "type": "text"
     }
   ],
@@ -1489,7 +1489,7 @@
         },
         "datasource": "Prometheus",
         "definition": "label_values(kube_namespace_labels, namespace)",
-        "description": "Выберите пространство имен для фильтрации данных",
+        "description": "Select namespaces to filter data",
         "error": null,
         "hide": 0,
         "includeAll": true,
@@ -1514,88 +1514,88 @@
       {
         "current": {
           "selected": false,
-          "text": "20",
-          "value": "20"
+          "text": "0.03",
+          "value": "0.03"
         },
-        "description": "Стоимость CPU ядра в час",
+        "description": "Cost per CPU core per hour ($)",
         "error": null,
         "hide": 0,
-        "label": "CPU Цена за ядро/час",
+        "label": "CPU Cost per core/hour",
         "name": "CPU_COST_PER_CORE_HOUR",
         "options": [
           {
             "selected": true,
-            "text": "20",
-            "value": "20"
+            "text": "0.03",
+            "value": "0.03"
           }
         ],
-        "query": "20",
+        "query": "0.03",
         "skipUrlSync": false,
         "type": "textbox"
       },
       {
         "current": {
           "selected": false,
-          "text": "5",
-          "value": "5"
+          "text": "0.004",
+          "value": "0.004"
         },
-        "description": "Стоимость ГБ памяти в час",
+        "description": "Cost per GB of memory per hour ($)",
         "error": null,
         "hide": 0,
-        "label": "Память Цена за ГБ/час",
+        "label": "Memory Cost per GB/hour",
         "name": "MEMORY_COST_PER_GB_HOUR",
         "options": [
           {
             "selected": true,
-            "text": "5",
-            "value": "5"
+            "text": "0.004",
+            "value": "0.004"
           }
         ],
-        "query": "5",
+        "query": "0.004",
         "skipUrlSync": false,
         "type": "textbox"
       },
       {
         "current": {
           "selected": false,
-          "text": "100",
-          "value": "100"
+          "text": "0.95",
+          "value": "0.95"
         },
-        "description": "Стоимость GPU карты в час",
+        "description": "Cost per GPU card per hour ($)",
         "error": null,
         "hide": 0,
-        "label": "GPU Цена за карту/час",
+        "label": "GPU Cost per card/hour",
         "name": "GPU_COST_PER_CARD_HOUR",
         "options": [
           {
             "selected": true,
-            "text": "100",
-            "value": "100"
+            "text": "0.95",
+            "value": "0.95"
           }
         ],
-        "query": "100",
+        "query": "0.95",
         "skipUrlSync": false,
         "type": "textbox"
       },
       {
         "current": {
           "selected": false,
-          "text": "2.5",
-          "value": "2.5"
+          "text": "0.1",
+          "value": "0.1"
         },
-        "description": "Стоимость ГБ хранилища в месяц",
+        "description": "Cost per GB of storage per month ($)",
         "error": null,
         "hide": 0,
-        "label": "Хранилище Цена за ГБ/месяц",
+        "label": "Storage Cost per GB/month",
         "name": "STORAGE_COST_PER_GB_MONTH",
         "options": [
           {
             "selected": true,
-            "text": "2.5",
-            "value": "2.5"
+            "text": "0.1",
+            "value": "0.1"
           }
         ],
-        "query": "2.5",
+        "query": "0.1",
         "skipUrlSync": false,
         "type": "textbox"
       }
