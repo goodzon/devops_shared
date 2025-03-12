@@ -1488,7 +1488,7 @@
           "value": "$__all"
         },
         "datasource": "Prometheus",
-        "definition": "label_values(kube_namespace_labels, namespace)",
+        "definition": "label_values(namespace)",
         "description": "Select namespaces to filter data",
         "error": null,
         "hide": 0,
@@ -1498,7 +1498,7 @@
         "name": "namespace",
         "options": [],
         "query": {
-          "query": "label_values(kube_namespace_labels, namespace)",
+          "query": "label_values(namespace)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 2,
