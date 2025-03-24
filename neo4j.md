@@ -1,4 +1,4 @@
-###neo4j-pvc.yaml
+### neo4j-pvc.yaml
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -12,7 +12,7 @@ spec:
       storage: 10Gi
 ```
 ---
-###neo4j-deployment.yaml
+### neo4j-deployment.yaml
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -53,7 +53,7 @@ spec:
             claimName: neo4j-data
 ```
 ---
-###neo4j-service.yaml
+### neo4j-service.yaml
 ```yaml
 apiVersion: v1
 kind: Service
@@ -72,7 +72,7 @@ spec:
       targetPort: 7687
 ```
 ---
-###neo4j-ingress.yaml
+### neo4j-ingress.yaml
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -94,7 +94,7 @@ spec:
             pathType: Prefix
 ```
 ---
-###neo4j-license-secret.yaml
+### neo4j-license-secret.yaml
 ```yaml
 apiVersion: v1
 kind: Secret
