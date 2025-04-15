@@ -1,0 +1,47 @@
+langfuse:
+  publicUrl: "https://your-domain/langfuse"
+  salt:
+    value: "changeme_secure_salt"
+  nextauth:
+    secret:
+      value: "changeme_nextauth_secret"
+  encryptionKey:
+    value: "changeme_encryption_key"
+
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "200m"
+    limits:
+      memory: "512Mi"
+      cpu: "500m"
+
+postgresql:
+  enabled: false
+
+clickhouse:
+  enabled: false
+
+redis:
+  enabled: false
+
+external:
+  postgresql:
+    url: "postgresql://langfuse:langfusepass@postgres.sop-dev.svc.cluster.local:5432/langfuse"
+
+  redis:
+    url: "redis://:redispass@redis.sop-dev.svc.cluster.local:6379"
+
+  clickhouse:
+    url: "http://clickhouse.sop-dev.svc.cluster.local:8123"
+
+ingress:
+  enabled: true
+  className: "gce-internal"
+  annotations: {}
+  hosts:
+    - host: your-domain
+      paths:
+        - path: /langfuse
+          pathType: Prefix
+  tls: [] # опционально: добавь сюда TLS-конфигурацию, если нужно
