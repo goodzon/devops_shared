@@ -1,5 +1,6 @@
 langfuse:
   publicUrl: "https://your-domain/langfuse"
+
   salt:
     value: "changeme_secure_salt"
   nextauth:
@@ -16,25 +17,6 @@ langfuse:
       memory: "512Mi"
       cpu: "500m"
 
-postgresql:
-  enabled: false
-
-clickhouse:
-  enabled: false
-
-redis:
-  enabled: false
-
-external:
-  postgresql:
-    url: "postgresql://langfuse:langfusepass@postgres.sop-dev.svc.cluster.local:5432/langfuse"
-
-  redis:
-    url: "redis://:redispass@redis.sop-dev.svc.cluster.local:6379"
-
-  clickhouse:
-    url: "http://clickhouse.sop-dev.svc.cluster.local:8123"
-
 ingress:
   enabled: true
   className: "gce-internal"
@@ -44,4 +26,59 @@ ingress:
       paths:
         - path: /langfuse
           pathType: Prefix
-  tls: [] # опционально: добавь сюда TLS-конфигурацию, если нужно
+  tls: []
+
+postgresql:
+  enabled: true
+  architecture: standalone
+  auth:
+    username: langfuse
+    password: langfusepass
+    database: langfuse
+  primary:
+    resources:
+      requests:
+        memory: 256Mi
+        cpu: 200m
+      limits:
+        memory: 512Mi
+        cpu: 500m
+
+clickhouse:
+  enabled: true
+  resources:
+    requests:
+      memory: 512Mi
+      cpu: 300m
+    limits:
+      memory: 1Gi
+      cpu: 600m
+  auth:
+    username: default
+    password: clickhousepass
+
+redis:
+  enabled: true
+  architecture: standalone
+  auth:
+    password: redispass
+  master:
+    resources:
+      requests:
+        memory: 128Mi
+        cpu: 100m
+      limits:
+        memory: 256Mi
+        cpu: 200m
+
+
+
+
+helm repo add langfuse https://langfuse.github.io/langfuse-k8s
+helm repo update
+
+kubectl create namespace sop-dev --dry-run=client -o yaml | kubectl apply -f -
+
+helm install langfuse langfuse/langfuse \
+  -n sop-dev \
+  -f langfuse-values.yaml
