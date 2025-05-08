@@ -1,0 +1,52 @@
+curl -fsSL https://packages.fluentbit.io/fluentbit.key | sudo gpg --dearmor -o /usr/share/keyrings/fluentbit.gpg
+echo "deb [signed-by=/usr/share/keyrings/fluentbit.gpg] https://packages.fluentbit.io/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/fluentbit.list
+sudo apt update
+sudo apt install fluent-bit -y
+
+
+
+/etc/fluent-bit/fluent-bit.conf
+
+[SERVICE]
+    Flush        5
+    Daemon       Off
+    Log_Level    info
+    Parsers_File parsers.conf
+
+[INPUT]
+    Name              tail
+    Path              /home/ubuntu/airflow/logs/scheduler/*/*.log
+    Path_Key          filename
+    Refresh_Interval  10
+    Rotate_Wait       30
+    DB                /var/log/fluent-bit-airflow.db
+    Mem_Buf_Limit     10MB
+    Skip_Long_Lines   On
+    multiline.parser  airflow
+
+[OUTPUT]
+    Name              cloudwatch_logs
+    Match             *
+    region            us-east-1
+    log_group_name    airhaifa-dev-airflow
+    log_stream_prefix scheduler/
+    auto_create_group true
+
+
+
+/etc/fluent-bit/parsers.conf
+
+[PARSER]
+    Name         airflow
+    Format       regex
+    Regex        ^\[(?<time>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}\+\d{4})\]
+    Time_Key     time
+    Time_Format  %Y-%m-%dT%H:%M:%S.%L%z
+    Multiline    On
+    Flush_Interval 1
+
+
+
+sudo systemctl enable fluent-bit
+sudo systemctl start fluent-bit
+sudo systemctl status fluent-bit
